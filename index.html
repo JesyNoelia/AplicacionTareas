@@ -6,15 +6,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>APLICACION TAREAS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
     <header>
-        <!--  <h1>Listado de Tareas</h1> -->
+        <h1>Hoja de Tareas</h1>
+        <div>
+            <i class="fas fa-tasks"></i>
+        </div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+
     </header>
     <div class="container">
+
+        <form action="" id="formulario">
+            <input type="text" placeholder="INGRESA TU NUEVA TAREA" id="tarea">
+            <select id="prioridad">
+                <option value="" selected>Selecciona una prioridad</option>
+                <option value="diaria">Diaria</option>
+                <option value="mensual">Mensual</option>
+                <option value="urgente">urgente</option>
+            </select>
+            <input type="submit" value="Guardar" id="guardar">
+        </form>
+
+        <div class="buscador">
+            <select id="prioridad">
+                <option value="" selected>Filtrar tareas por prioridad</option>
+                <option value="diaria">Diaria</option>
+                <option value="mensual">Mensual</option>
+                <option value="urgente">urgente</option>
+            </select>
+            <input type="text" placeholder="Buscador de tareas" id="search">
+        </div>
 
     </div>
 
