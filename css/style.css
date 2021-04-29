@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;700&family=Original+Surfer&display=swap');
+
+:root{
+    --fuenteprincipal: 'Dosis', sans-serif;
+    --fuentesecundaria: 'Original Surfer', sans-serif;
+    --anchomaximo: 62.500em
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+header{
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 2em;
+    background-color: rebeccapurple;
+}
+img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.container{
+    max-width: var(--anchomaximo);
+    background-color: rebeccapurple;
+    margin: 0 auto;
+    height: 600px;
+    
+}
+h1{
+    font-family: var(--fuentesecundaria);
+}
+
