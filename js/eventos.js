@@ -1,6 +1,7 @@
 let seccionTareas = document.querySelector('.tareas');
 let idActual = 2;
 
+
 const pintarUnaTarea = function (pJson) {
     let article = document.createElement('article');
     let div = document.createElement('div');
@@ -54,18 +55,30 @@ let guardarTarea = document.getElementById('guardar');
 let inputTarea = document.getElementById('tarea');
 let prioridad = document.getElementById('prioridad');
 
+let campoTexto = document.getElementById('tarea').value;
+let campoPrioridad = document.getElementById('prioridad').selectedIndex
+
+
+
 guardarTarea.addEventListener('click', ingresarTarea);
 
 function ingresarTarea(event) {
     event.preventDefault();
-    idActual++;
-    let tarea = { idTarea: idActual, titulo: inputTarea.value.trim(), prioridad: prioridad.value, }
-    tareas.push(tarea);
-    //console.log(prioridad.value);
-    //console.log(inputTarea.value);
-    //console.log(idActual);
-    pintarUnaTarea(tarea)
-    alert('Tu nueva tarea ha sido agregada')
+
+    if ((campoTexto == null || campoTexto.length == 0) && (campoPrioridad == 0)) {
+
+        alert('Todos los campos son obligatorios')
+
+    } else if ((campoTexto !== null || campoTexto.length !== 0) && (campoPrioridad !== 0)) {
+        idActual++;
+        let tarea = { idTarea: idActual, titulo: inputTarea.value.trim(), prioridad: prioridad.value, }
+        tareas.push(tarea);
+        //console.log(prioridad.value);
+        //console.log(inputTarea.value);
+        //console.log(idActual);
+        pintarUnaTarea(tarea)
+        alert('Tu nueva tarea ha sido agregada')
+    }
 }
 //console.log(tareas);
 
