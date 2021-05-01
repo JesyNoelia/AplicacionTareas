@@ -17,23 +17,55 @@ header{
     width: 100%;
     padding: 20px 0;
     text-align: center;
-    height: 100px;
-    font-size: 1.5em;
-    background-color: black;
+    height: auto;
+    font-size: 1.1em;
+    background-image: url('https://tse3.mm.bing.net/th?id=OIP.WrFubdqhDJuIHzaZfguHYwHaCy&pid=15.1');
+    background-repeat: repeat-x;
     box-shadow: 5px 5px 10px rgb(110, 110, 110);
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-   
+    justify-content: space-around;
+}
+.titulo{
+    display: flex;
+    flex-direction: row;
 }
 
-header i{
+.titulo i{
     font-size: 1.8em;
     color:white;
-    padding: 0 100px;
+    padding-left: 50px;
     margin-top: 10px;
 }
 
+.colores{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.colores div{
+    color: white;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 15px;
+    font-family: var(--fuentesecundaria);
+}
+.colores div:nth-child(1){
+    background-color:rgb(54, 255, 64);
+}
+.colores div:nth-child(2){
+    background-color:yellow;
+}
+.colores div:nth-child(3){
+    background-color:red;
+}
+h1{
+    font-family: var(--fuentesecundaria);
+    -webkit-text-fill-color: white;
+-webkit-text-stroke: 1px black;
+font-size: 7vh;
+}
 
 
 img{
@@ -43,6 +75,7 @@ img{
 }
 
 .container{
+    font-family: var(--fuenteprincipal);
     max-width: var(--anchomaximo);
     background-color:#e5e4e2;
     margin: 0 auto;
@@ -51,12 +84,9 @@ img{
     border-radius: 40px;
     box-shadow: 10px 10px 15px grey;
 }
-h1{
-    font-family: var(--fuentesecundaria);
-    color: white;
-}
 
-form input:first-child, #search{
+
+form input:first-child, #buscaTarea{
     width: 300px;
     margin: 15px 0;
     margin-left: 30px;
@@ -69,7 +99,7 @@ form input:first-child, #search{
     width: 400px;
 }
 
-#prioridad{
+#prioridad, #prioridadValor{
     padding: 10px;
     width: 300px;
     margin:  0 30px ;
@@ -100,8 +130,8 @@ form input:first-child, #search{
 
 section article {
     background-color: rgb(241, 241, 241);
+ 
     margin-left: 20px;
-    border-left: 30px solid red;
     margin-right: 20px;
     margin-top: 3px;
     
@@ -120,5 +150,5 @@ section article h3 {
 .tareas button{
     background-color: rgb(255, 235, 121);
     padding: 10px;
-    
 }
+
