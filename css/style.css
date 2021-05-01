@@ -73,8 +73,9 @@ font-size: 7vh;
 .lateralIzquierdo{
     position: absolute;
     display: block;
-    top: 100px;
-    left: -200px;
+    top: 40px;
+    left: -240px;
+    width: 200px;
 }
 .lateralDerecho{
     width: 200px;
@@ -83,6 +84,14 @@ font-size: 7vh;
     top: -15px;
     right: -230px;
 }
+.derecha{
+    width: 200px;
+    position: absolute;
+    display: block;
+    top: 300px;
+    right: -230px;
+}
+
 
 .container{
     font-family: var(--fuenteprincipal);
@@ -91,6 +100,7 @@ font-size: 7vh;
     margin: 0 auto;
     margin-top: 15px;
     height: 600px;
+    border: 5px dashed rgb(12, 140, 151);
     border-radius: 40px;
     box-shadow: 10px 10px 15px grey;
     position: relative;
