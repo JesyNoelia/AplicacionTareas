@@ -1,4 +1,4 @@
-function borraArray(pLista, pId) {
+function borrarArray(pLista, pId) {
     let idABorrar = pLista.findIndex(tarea => tarea.idTarea === pId);
     tareas.splice(idABorrar, 1);
 }
