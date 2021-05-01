@@ -8,6 +8,7 @@
     <title>APLICACION TAREAS</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/tareas.js"></script>
 </head>
 
 <body>
@@ -17,17 +18,13 @@
         <div>
             <i class="fas fa-tasks"></i>
         </div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
 
     </header>
     <div class="container">
 
         <form action="" id="formulario">
-            <input type="text" placeholder="INGRESA TU NUEVA TAREA" id="tarea">
-            <select id="prioridad">
+            <input type="text" placeholder="INGRESA TU NUEVA TAREA" id="tarea" required>
+            <select id="prioridad" required>
                 <option value="" selected>Selecciona una prioridad</option>
                 <option value="diaria">Diaria</option>
                 <option value="mensual">Mensual</option>
@@ -44,7 +41,31 @@
                 <option value="urgente">urgente</option>
             </select>
             <input type="text" placeholder="Buscador de tareas" id="search">
+            <i class="fas fa-search"></i>
         </div>
+
+        <section class="tareas">
+            <!-- <article>
+                <div>
+                    <h3>Titulo de la tarea</h3>
+                    <button>Eliminar</button>
+                </div>
+            </article>
+            <article>
+                <div>
+                    <h3>Titulo de la tarea</h3>
+                    <button>Eliminar</button>
+                </div>
+            </article>
+            <article>
+                <div>
+                    <h3>Titulo de la tarea</h3>
+                    <button>Eliminar</button>
+                </div>
+            </article> -->
+
+
+        </section>
 
     </div>
 
@@ -52,6 +73,7 @@
 
 
     <script src="js/funciones.js"></script>
+    <script src="js/eventos.js"></script>
 </body>
 
 </html>
