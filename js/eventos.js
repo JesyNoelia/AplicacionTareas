@@ -12,11 +12,11 @@ const pintarUnaTarea = function (pJson) {
     boton.title = 'Has completado tu tarea? Eliminala!'
 
     let color = "";
-    if (pJson.prioridad === 'Urgente') {
+    if (pJson.prioridad === 'urgente') {
         color = 'red'
-    } else if (pJson.prioridad === 'Mensual') {
+    } else if (pJson.prioridad === 'mensual') {
         color = 'yellow'
-    } else if (pJson.prioridad === 'Diaria') {
+    } else if (pJson.prioridad === 'diaria') {
         color = 'rgb(54, 255, 64)'
     }
     article.style.borderLeft = `30px solid ${color}`
@@ -59,8 +59,12 @@ guardarTarea.addEventListener('click', ingresarTarea);
 function ingresarTarea(event) {
     event.preventDefault();
     idActual++;
-    tareas.push({ idTarea: idActual, titulo: inputTarea.value.trim(), prioridad: prioridad.value, });
-    pintarListaTareas(tareas)
+    let tarea = { idTarea: idActual, titulo: inputTarea.value.trim(), prioridad: prioridad.value, }
+    tareas.push(tarea);
+    //console.log(prioridad.value);
+    //console.log(inputTarea.value);
+    //console.log(idActual);
+    pintarUnaTarea(tarea)
     alert('Tu nueva tarea ha sido agregada')
 }
 //console.log(tareas);
@@ -74,7 +78,8 @@ function borrarTarea(event) {
 
     objetoTarea.parentNode.removeChild(objetoTarea)
 
-    borraArray(tareas, parseInt(event.target.dataset.idTarea))
+    borrarArray(tareas, parseInt(event.target.dataset.id))
+    //console.log(event.target.dataset.id);
     alert('ENHORABUENA! Has completado tu tarea!')
 }
 
