@@ -14,9 +14,15 @@
 <body>
 
     <header>
-        <h1>Hoja de Tareas</h1>
-        <div>
+        <div class="titulo">
+            <h1>Hoja de Tareas</h1>
+
             <i class="fas fa-tasks"></i>
+        </div>
+        <div class="colores">
+            <div>Tareas Diarias</div>
+            <div>Tareas Mensuales</div>
+            <div>Tareas urgentes</div>
         </div>
 
     </header>
@@ -28,19 +34,19 @@
                 <option value="" selected>Selecciona una prioridad</option>
                 <option value="diaria">Diaria</option>
                 <option value="mensual">Mensual</option>
-                <option value="urgente">urgente</option>
+                <option value="urgente">Urgente</option>
             </select>
             <input type="submit" value="Guardar" id="guardar">
         </form>
 
         <div class="buscador">
-            <select id="prioridad">
+            <select id="prioridadValor">
                 <option value="" selected>Filtrar tareas por prioridad</option>
                 <option value="diaria">Diaria</option>
                 <option value="mensual">Mensual</option>
-                <option value="urgente">urgente</option>
+                <option value="urgente">Urgente</option>
             </select>
-            <input type="text" placeholder="Buscador de tareas" id="search">
+            <input type="text" placeholder="Buscador de tareas" id="buscaTarea">
             <i class="fas fa-search"></i>
         </div>
 
