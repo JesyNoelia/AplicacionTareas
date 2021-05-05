@@ -55,7 +55,7 @@ let guardarTarea = document.getElementById('guardar');
 let inputTarea = document.getElementById('tarea');
 let prioridad = document.getElementById('prioridad');
 
-let campoTexto = document.getElementById('tarea').value;
+let campoTexto = document.getElementById('tarea');
 let campoPrioridad = document.getElementById('prioridad').selectedIndex
 
 
@@ -65,11 +65,11 @@ guardarTarea.addEventListener('click', ingresarTarea);
 function ingresarTarea(event) {
     event.preventDefault();
 
-    if ((campoTexto == null || campoTexto.length == 0) && (campoPrioridad == 0)) {
+    if (campoTexto.value == "" || campoPrioridad.value == "") {
 
         alert('Todos los campos son obligatorios')
 
-    } else if ((campoTexto !== null || campoTexto.length !== 0) && (campoPrioridad !== 0)) {
+    } else {
         idActual++;
         let tarea = { idTarea: idActual, titulo: inputTarea.value.trim(), prioridad: prioridad.value, }
         tareas.push(tarea);
